@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Profesiones | Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/2825777.png">
+	<link rel="stylesheet" href="../vendor/chartist/css/chartist.min.css">
+    <link href="../vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="../vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/estilosv.css">
+	<link rel="stylesheet" href="../css/validaciones.css">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+       
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a th:href="@{/principal}" class="brand-logo">
+                <img class="logo-abbr" src="../img/zarla-escpate-1x1-2400x2400-20210603-h6qr8xphp7xfp9vt4pwc.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+		
+		<!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="dashboard_bar">
+								OFERTAS
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right">
+							<li class="nav-item">
+								<div class="input-group search-area d-xl-inline-flex d-none">
+									<div class="input-group-append">
+										<span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+									</div>
+									<input type="text" class="form-control" placeholder="Search here...">
+								</div>
+							</li>
+							
+							
+							
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                    <img src="../img/profile/login.png" width="20" alt=""/>
+									<div class="header-info">
+										<span class="text-black"><strong>Andres Sanchez</strong></span>
+										<p class="fs-12 mb-0">Administrador</p>
+									</div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                   
+                                    <a th:href="@{/index}" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span class="ml-2">salir </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+                    <li><a class="has-arrow ai-icon" th:href="@{/principal}" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+</svg>
+							<span class="nav-text">Inicio</span>
+						</a>
+                        
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg>
+							<span class="nav-text">Aspirantes</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a th:href="@{/aspirante}">Aspirantes</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+  <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"/>
+  <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"/>
+</svg>
+							<span class="nav-text">Agencia</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="../agencia/agencia.html">Agencia</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+  <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+  <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+</svg>
+							<span class="nav-text">Oferta</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a th:href="@{/oferta}">Ofertas</a></li>
+                            
+                        </ul>
+                    </li>
+					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+							<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+						  </svg>
+
+						<span class="nav-text">profesion</span>
+					</a>
+					<ul aria-expanded="false">
+						<li><a th:href="@{/oferta}">profesion</a></li>
+						
+					</ul>
+				</li>
+					
+
+
+
+                    
+                                        
+                    
+                </ul>
+				<div class="add-menu-sidebar">
+					<img src="images/calendar.png" alt="" class="mr-3">
+					<p class="	font-w500 mb-0">Create Workout Plan Now</p>
+				</div>
+				<div class="copyright">
+					<p><strong>Gymove Fitness Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+					<p>Made with <span class="heart"></span> by DexignZone</p>
+				</div>
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+		
+		<!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="page-titles">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a th:href="@{/principal}">Inicio</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Ofertas</a></li>
+					</ol>
+                </div>
+
+				<div class="row">
+					<div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Lista De Profesiones</h4>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><span
+                                    class="btn-icon-left text-primary"><i class="fa fa-plus color-info"></i>
+                                </span>Agregar</button>
+                            </div>
+<!-- Modal registrar-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">registrar profesion</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<form th:action="@{/oferta/add}" method="post" th:object="${oferta}" id="formulario">
+
+		<div class="modal-body">
+			<div class="form-group" id="grupo__nombre">
+				<label for="">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input  th:field="*{nombre}" type="text" class="form-control input-default" placeholder="" autocomplete="off">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					<div class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+				</div>
+				<p class="formulario__input-error"> Tiene que ser mínimo 1 caracter y máximo 20 de longitud. Solo puede haber un espacio y el nombre(s) no puede contener caracteres especiales.</p>
+			</div>
+			<div class="form-group" id="grupo__descripcion">
+				<label for="">Descripcion</label>
+				<div class="formulario__grupo-input">
+					<input  th:field="*{descripcion}" type="text" class="form-control input-default" placeholder="" autocomplete="off">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"> Tiene que ser mínimo 1 caracter y máximo 20 de longitud. Solo puede haber un espacio y el nombre(s) no puede contener caracteres especiales.</p>
+			</div>
+			
+			<div class="form-group" id="grupo__fecha">
+				<label for="">Fecha Pago inicio</label>
+				<div class="formulario__grupo-input">
+					<input type="date" th:field="*{fecha_inicio}"  class="form-control input-default " placeholder="" autocomplete="off">
+					</div>
+					<p class="formulario__input-error">Tienes que elegir una opcion</p>
+				<div class="form-text text-danger"></div>
+				
+			</div>
+			<div class="form-group" id="grupo__fechaFIN">
+				<label for="">Fecha fin</label>
+				<div class="formulario__grupo-input">
+					<input type="date" th:field="*{fecha_fin}"  class="form-control input-default " placeholder="" autocomplete="off">
+				</div>
+					<p class="formulario__input-error">Tienes que elegir una opcion</p>
+				
+			</div>	
+				  
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="submit" class="btn btn-primary" id="registrar">Guardar</button>
+		</div>
+	</form>
+	  </div>
+	</div>
+  </div>
+
+
+ 
+
+
+
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <!-- <div class="centrar mb-3" style="display: flex; justify-content: center;">
+                                        <button type="button" class="btn btn-rounded btn-primary mr-3"><span
+                                            class="btn-icon-left text-primary"><i class="fa fa-plus color-info"></i>
+                                        </span>Agregar</button>
+                                    </div> -->
+                                    
+                                    <table class="table">
+										<thead>
+										  <tr>
+											<th scope="col">#</th>
+											<th scope="col">nombre</th>
+											<th scope="col">descripcion</th>
+											<th scope="col">fecha_inicio</th>
+											<th scope="col">fecha_fin</th>
+
+											<th scope="col">acciones</th>
+											
+										  </tr>
+										</thead>
+										<tbody>
+										  <tr th:each="c:${ofertas}">
+											<td th:text="${c.id}"></td>
+											<td th:text="${c.nombre}"></td>
+											<td th:text="${c.descripcion}"></td>
+											<td th:text="${c.fecha_inicio}"></td>
+											<td th:text="${c.fecha_fin}"></td>
+											<td>
+												<a th:href="@{editar/}+${c.id}" role="button"
+												class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+												><i class="fa fa-pencil"></i>
+											    </a>
+												<a role="button" class="btn btn-danger btn-sm"
+                        th:href="@{delete/} + ${c.id}"
+                        onclick="return confirm('Estás seguro que quieres eliminar esta profesion?');">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+							<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+						  </svg>
+
+
+
+                        </a>
+</td>
+										  </tr>
+										  
+										</tbody>
+									  </table>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+
+			</div>
+		</div>
+                
+	
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../vendor/global/global.min.js"></script>
+	<script src="../vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="../vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+	<script src="../js/deznav-init.js"></script>
+	<script src="../js/validacionProfesion.js"></script>
+
+	<script src="../vendor/owl-carousel/owl.carousel.js"></script>
+	
+	<!-- Chart piety plugin files -->
+    <script src="../vendor/peity/jquery.peity.min.js"></script>
+	
+	<!-- Apex Chart -->
+	<script src="../vendor/apexchart/apexchart.js"></script>
+	
+	<!-- Dashboard 1 -->
+	<script src="../js/dashboard/dashboard-1.js"></script>
+	<script>
+		function carouselReview(){
+			/*  testimonial one function by = owl.carousel.js */
+			jQuery('.testimonial-one').owlCarousel({
+				loop:true,
+				autoplay:true,
+				margin:30,
+				nav:false,
+				dots: false,
+				left:true,
+				navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+				responsive:{
+					0:{
+						items:1
+					},
+					484:{
+						items:2
+					},
+					882:{
+						items:3
+					},	
+					1200:{
+						items:2
+					},			
+					
+					1540:{
+						items:3
+					},
+					1740:{
+						items:4
+					}
+				}
+			})			
+		}
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				carouselReview();
+			}, 1000); 
+		});
+	</script>
+    </body>
+</html>
